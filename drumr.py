@@ -30,7 +30,9 @@ class Listener(DeviceListener):
             if p == pose.rest:
                 print("rest")
             elif p == pose.fist:
-                pass
+                speech("Dot")
+            elif p == pose.fingers_spread:
+                speech("Dash")
             elif p == pose.wave_in:
                 speech("Left")
             elif p == pose.wave_out:
