@@ -26,10 +26,22 @@ class Listener(DeviceListener):
         print("Goodbye, Myo!")
 
     def on_pose(self, myo, timestamp, p):
-        if p == pose.rest:
-            print("rest")
-        elif p == pose.fist:
-            speech("Stop")
+        if self.mavg[1] > -0.2:  # forearm down
+            if p == pose.rest:
+                print("rest")
+            elif p == pose.fist:
+                pass
+            elif p == pose.wave_in:
+                speech("Left")
+            elif p == pose.wave_out:
+                speech("Right")
+            else:
+                pass
+        elif self.mavg[1] < -1.0:  # forearm up
+            if p == pose.fist:
+                speech("Stop")
+            elif p == pose.fingers_spread:
+                speech("Hello") 
             
         print(p)
 
@@ -43,6 +55,8 @@ class Listener(DeviceListener):
         self.mavg = (self.mavg[0]*fac + roll*(1-fac),
                 self.mavg[1]*fac + pitch*(1-fac),
                 self.mavg[2]*fac + yaw*(1-fac))
+
+        #print(self.mavg[1])
 
         #print("Orientation:", round(self.mavg[0], 3),  round(self.mavg[1], 3), round(self.mavg[2], 3), "*** Direction:",
         #      "+" if self.direction[0] == Up else "-",
