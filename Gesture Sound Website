@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+
+    
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel = "stylesheet" href ="hackStyle.css">
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+  <div class= "fullRow">
+    <img src="http://www.headsub.com/attachment/2unBbWM3/Templates/Textures/audio_icon.png" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+
+    <h1 class = "appname">GestureLead</h1>
+
+    </div>
+    <div class= "threerow">
+      <button class="newbutton">Capabilities</button>
+      <button class="newbutton">Source Code</button>
+      <button class="newbutton">About Us</button>
+      <div class="after"></div>
+      
+    </div>
+
+    
+    
+    
+
+    <div class= "threerow2">
+    <div class="horizontal">
+    <h1 class= "appname2"> Firefighter</h1>
+      <img src="http://clipartsign.com/upload/2016/01/31/firefighters-clipart-fire-fighter-clip-art.png" class="fire" >
+
+
+    </div>
+    
+    <div class="horizontal">
+    <h1 class= "appname2"> Special OPS</h1>
+    <img src="http://previews.123rf.com/images/kassim1964/kassim19641305/kassim1964130500341/20098474-warrior-Stock-Vector-swat-soldier.jpg" class="fire" >
+      
+    </div>
+    
+    <div class="horizontal">
+    <h1 class= "appname2"> Soldier</h1>  
+    <img src="http://www.au.af.mil/au/awc/cliparmy/1-1b.gif" class="fire" >
+    </div>
+    </div>
+    <div class= "after"></div>
+
+    
+
+
+
+  </body>
+</html>
